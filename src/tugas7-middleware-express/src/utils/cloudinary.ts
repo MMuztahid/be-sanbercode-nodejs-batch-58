@@ -1,4 +1,5 @@
 import { v2 as cloudinary } from "cloudinary";
+require('dotenv').config()
 
 import {
   CLOUDINARY_API_KEY,

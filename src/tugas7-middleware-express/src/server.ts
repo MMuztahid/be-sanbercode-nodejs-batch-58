@@ -1,5 +1,8 @@
 import express from "express";
 const uploadRoute = require('./route');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 const PORT = 3000;
