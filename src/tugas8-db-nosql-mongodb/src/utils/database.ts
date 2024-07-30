@@ -3,11 +3,14 @@ import { DATABASE_URL } from "./env";
 
 const connect = async () => {
   try {
-    await mongoose.connect(DATABASE_URL, {
-      autoIndex: true,
-      dbName: "sanber-be-57",
-      connectTimeoutMS: 10000,
-    });
+    if(DATABASE_URL) {
+      await mongoose.connect(DATABASE_URL, {
+        autoIndex: true,
+        dbName: "clustermine",
+        connectTimeoutMS: 10000,
+      });
+    }
+    
     console.log("Database connected");
   } catch (error) {
     console.log(error);
